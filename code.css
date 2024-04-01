@@ -156,6 +156,7 @@
 }
 #points
 {
+    display: none;
     text-align: center;
     width: 100px;
     padding: 5px;
