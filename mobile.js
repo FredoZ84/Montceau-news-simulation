@@ -2,7 +2,7 @@ function isMobileDevice() {
 
     let preHeader = document.getElementById("pre-header")
     let initialWidth = "100%"
-    let desiredWidth = "1092px"
+    let desiredWidth = "112%"
 
     if(navigator.userAgentData["mobile"]){
         console.log("resize")

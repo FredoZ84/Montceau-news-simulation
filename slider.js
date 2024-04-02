@@ -3,6 +3,8 @@ element[0].classList.add("active");
 let dots = document.getElementsByClassName("dot"); // varialble locale
 
 let compteur = 0;
+let time = 3
+let timeMilli = time*1000
 let timer, elements, slides, slidesWidth, slideActive, difference;
 const tabPoint = [];
 
@@ -26,22 +28,18 @@ window.onload = () => {
 	//prev.addEventListener("click", slidePrev);
 
 	//Automatiser le diaporama
-
-
-	timer = setInterval(slideNext,10000);
-
+	alternate()
 	dotActive();
 
 	// gerer le survol de la souris
-	slider.addEventListener("mouseover", stopTimer);
+	/*slider.addEventListener("mouseover", stopTimer);
 	slider.addEventListener("mouseout", startTimer);
 
 	points.addEventListener("mouseover",stopTimer);
-	points.addEventListener("mouseout", startTimer);
+	points.addEventListener("mouseout", startTimer);*/
 
 
 	findDot();
-	//diffusion();
 
 	// Mise en oeuvre du responsiv
 	window.addEventListener("resize", () => {
@@ -99,6 +97,15 @@ window.onload = () => {
 	}	
 }
 
+function alternate() {
+	startTimer()
+	setTimeout(() => {
+		stopTimer()
+		startTimerInverse()
+	}, (slides.length*timeMilli));
+
+}
+
 function slideNext() {
 	compteur++
 	if (compteur == slides.length) {
@@ -125,7 +132,12 @@ function stopTimer() {
 }
 
 function startTimer() {
-	timer = setInterval(slideNext,5000);
+	timer = setInterval(slideNext,timeMilli);
+}
+
+function startTimerInverse() {
+	timer = setInterval(slidePrev,timeMilli)
+	
 }
  
 function addDot(){//ajoute les selecteurs
