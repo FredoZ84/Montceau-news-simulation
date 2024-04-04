@@ -277,16 +277,45 @@ body {
     font-size: 15px;
   }
 }
+*/
+@media screen and (max-width: 980px) {
+  #bg {
+    width:975px;
+  }
 
-@media screen and (max-width: 769px) {
+  #page {
+    width: 975px;
+  }
+
+  #firstChild {
+    width: 975px;
+  }
+
+  #content {
+    width: 619px;
+  }
+
+  #sidebar {
+    margin-left: 619px;
+  }
   .titlePrimaryBlock {
     width: 575px;
   }
+
+  .imgPrimaryBlock {
+    width: 585px;
+    height: 284px;
+  }
+
+  .imgPrimaryBlock img {
+   height: 292px;
+  }
+
   .justContent p {
     font-size: 15px;
   }
 }
-*/
+
 
 
 
