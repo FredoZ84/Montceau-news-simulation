@@ -138,7 +138,13 @@ body {
     font-size: 12px;
     height: 190px;
     /*border: 0.5px solid;*/
-    overflow-x: hidden;
+}
+
+.justContent p .text {
+  display: block;
+  border: 0.5px solid;
+  overflow-x: hidden;
+  height: 150px;
 }
 
 .imgPrimaryBlock  {
@@ -154,7 +160,7 @@ body {
 }
 
 #sidebar { 
-  /* padding: 15px; */
+  padding: unset;
   padding-left: 5px;
   /*background: #FFFFFF url(images/border_vert.png) repeat-y top left;*/
   /*margin-left: 744px;*/
@@ -262,10 +268,19 @@ body {
   background-color: #717171;
 }
 
-@media only screen and (max-width: 1100px) {
-    /* For mobile phones: */
+@media screen and (max-width: 1110px) {
     #pre-header {
       width: 112%;
+  }
+}
+
+@media screen and (max-width: 769px) {
+
+  .titlePrimaryBlock {
+    width: 575px;
+  }
+  .justContent p {
+    font-size: 15px;
   }
 }
 

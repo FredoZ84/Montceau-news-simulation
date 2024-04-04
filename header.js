@@ -1,6 +1,6 @@
 function reconfiguration() {
     let headerTop = document.getElementById("header_top")
-    console.log(headerTop)
+
     let logo = document.querySelectorAll("#header_top a")
     let searchBlock = document.getElementById("search_block")
     let wBlock = document.getElementById("wblock")
