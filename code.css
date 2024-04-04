@@ -267,15 +267,18 @@ body {
 {
   background-color: #717171;
 }
-
+/*
 @media screen and (max-width: 1110px) {
-    #pre-header {
-      width: 112%;
+  #pre-header {
+    width: 112%;
+  }
+
+  .justContent p {
+    font-size: 15px;
   }
 }
 
 @media screen and (max-width: 769px) {
-
   .titlePrimaryBlock {
     width: 575px;
   }
@@ -283,7 +286,7 @@ body {
     font-size: 15px;
   }
 }
-
+*/
 
 
 
