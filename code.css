@@ -135,16 +135,23 @@ body {
 }
 
 .justContent p {
-    font-size: 12px;
-    height: 190px;
-    /*border: 0.5px solid;*/
+  font-size: 12px;
+  height: 190px;
+  /*border: 0.5px solid;*/
 }
 
 .justContent p .text {
   display: block;
-  border: 0.5px solid;
+  /*border: 0.5px solid;*/
   overflow-x: hidden;
+  overflow-y: scroll;
+  scrollbar-width: thin;
   height: 150px;
+}
+
+.justContent p .text::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
 }
 
 .imgPrimaryBlock  {
@@ -298,6 +305,7 @@ body {
   #sidebar {
     margin-left: 619px;
   }
+
   .titlePrimaryBlock {
     width: 575px;
   }
@@ -311,8 +319,29 @@ body {
    height: 292px;
   }
 
+  .contentPrimaryBlock {
+    width: 250px;
+  }
+
+  .bkgrdBlock {
+    width: 250px;
+  }
+
   .justContent p {
-    font-size: 15px;
+    font-size: 17px;
+  }
+
+  .justContent p .text {
+    height: 140px;
+}
+
+  .justContent p br {
+    display: none;
+  }
+
+  .pubs a img {
+    width: 584px;
+    height: 167px;
   }
 }
 
