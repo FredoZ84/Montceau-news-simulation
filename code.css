@@ -279,9 +279,9 @@ body {
 }
 */
 @media screen and (max-width: 980px) {
-  body {
+  /*body {
     border: 1px solid yellow;
-  }
+  }*/
   #bg {
     width:100%;
   }
@@ -292,6 +292,7 @@ body {
 
   #firstChild {
     width: 100%;
+    border: 1px solid yellow;
   }
 
   #content {
