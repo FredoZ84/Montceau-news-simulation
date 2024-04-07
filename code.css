@@ -144,14 +144,7 @@ body {
   display: block;
   /*border: 0.5px solid;*/
   overflow-x: hidden;
-  overflow-y: scroll;
-  scrollbar-width: thin;
   height: 150px;
-}
-
-.justContent p .text::-webkit-scrollbar-thumb {
-  background: white;
-  border-radius: 10px;
 }
 
 .imgPrimaryBlock  {
@@ -287,15 +280,15 @@ body {
 */
 @media screen and (max-width: 980px) {
   #bg {
-    width:975px;
+    width:100%;
   }
 
   #page {
-    width: 975px;
+    width: 100%;
   }
 
   #firstChild {
-    width: 975px;
+    width: 100%;
   }
 
   #content {
@@ -327,13 +320,17 @@ body {
     width: 250px;
   }
 
+  .justContent h3 {
+    font-size: 18px;
+  }
+
   .justContent p {
     font-size: 17px;
   }
 
   .justContent p .text {
     height: 140px;
-}
+  }
 
   .justContent p br {
     display: none;

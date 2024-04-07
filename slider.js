@@ -3,7 +3,7 @@ element[0].classList.add("active");
 let dots = document.getElementsByClassName("dot"); // varialble locale
 
 let compteur = 0;
-let time = 10
+let time = 2
 let timeMilli = time*1000
 let timer, elements, slides, slidesWidth, slideActive, difference;
 const tabPoint = [];
@@ -28,7 +28,6 @@ window.onload = () => {
 	//prev.addEventListener("click", slidePrev);
 
 	//Automatiser le diaporama
-	console.log(slides.length)
 	alternate()
 	dotActive();
 
@@ -103,6 +102,9 @@ function alternate() {
 	setTimeout(() => {
 		stopTimer()
 		startTimerInverse()
+		setTimeout(() => {
+			stopTimer()
+		}, ((slides.length-1)*timeMilli));
 	}, ((slides.length-1)*timeMilli));
 }
 
