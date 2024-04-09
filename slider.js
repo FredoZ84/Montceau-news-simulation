@@ -3,7 +3,7 @@ element[0].classList.add("active");
 let dots = document.getElementsByClassName("dot"); // varialble locale
 
 let compteur = 0;
-let time = 2
+let time = 10
 let timeMilli = time*1000
 let timer, elements, slides, slidesWidth, slideActive, difference;
 const tabPoint = [];
