@@ -1,9 +1,9 @@
 let element = document.getElementsByClassName('element');
 element[0].classList.add("active");
 let dots = document.getElementsByClassName("dot"); // varialble locale
-
+let nb = 0
 let compteur = 0;
-let time = 10
+let time = 5
 let timeMilli = time*1000
 let timer, elements, slides, slidesWidth, slideActive, difference;
 const tabPoint = [];
@@ -29,6 +29,12 @@ window.onload = () => {
 
 	//Automatiser le diaporama
 	alternate()
+	let numberOfRepetition = 10
+	for (let index = 0; index < numberOfRepetition; index++) {
+		setTimeout(()=>{
+			alternate()
+		},((slides.length-1)*timeMilli+timeMilli)*2*(index+1))	
+	}
 	dotActive();
 
 	// gerer le survol de la souris
@@ -98,6 +104,8 @@ window.onload = () => {
 }
 
 function alternate() {
+	nb++
+	console.log(nb)
 	startTimer()
 	setTimeout(() => {
 		stopTimer()
@@ -115,8 +123,7 @@ function slideNext() {
 	}
 	let decal = -slidesWidth * compteur;
 	elements.style.transform =  "translateX("+ decal +"px)";
-	dotActive();
-		
+	dotActive();	
 }
 
 function slidePrev() {
