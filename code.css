@@ -556,6 +556,51 @@ body {
   #site_selector {
     margin-left: 30px;
   }
+
+  .element>a>img {
+    width: 100%;
+    height: auto;
+  }
+
+  #content {
+    width: 50%;
+  }
+
+  .slidhead, .primaryBlock, .titlePrimaryBlock , .imgPrimaryBlock, .contentPrimaryBlock {
+    width: 100%;
+  }
+
+  #sidebar {
+    margin-left: 51%;
+  }
+
+  img[alt="contactez Montceau-news"] {
+    width: 80%;
+  }
+
+  .sidebar_pubs {
+    text-align: start; 
+  }
+
+  .sidebar_pubs a img {
+    width: 80%;
+    height: auto;
+  }
+
+  .pubs a img {
+    width: 100%;
+    height: auto;
+  }
+
+  .post img {
+    width: 100%;
+    height: auto;
+  }
+  /*
+  #sidebar {
+    margin-left: 51%;
+  }
+  */
 }
 
 
