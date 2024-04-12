@@ -101,6 +101,12 @@ body {
   width: 900px;
 }
 
+#page {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
 .slidhead 
 {
     display: flex;
@@ -164,6 +170,22 @@ body {
   height: 150px;
 }
 
+.justContent p .text::-webkit-scrollbar {
+  width: 10px;
+  position: fixed;
+}
+
+.justContent p .text::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+.justContent p .text::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+
+
 .imgPrimaryBlock  {
     position: relative;
     width: 700px;
@@ -179,9 +201,13 @@ body {
 #sidebar { 
   padding: unset;
   padding-left: 5px;
+  margin-left: 1%;
   /*background: #FFFFFF url(images/border_vert.png) repeat-y top left;*/
-  /*margin-left: 744px;*/
+}
 
+#sidebar h3 { 
+  width: max-content;
+  font-family: sans-serif;
 }
 
 #frame
@@ -308,7 +334,6 @@ body {
   }
 
   #sidebar {
-    margin-left: 64%;
     background: unset;
   }
 
@@ -394,7 +419,6 @@ body {
     padding: 5px;
   }
   #sidebar {
-   /* margin-left: 619px;*/
     background: unset;
   }
 }
@@ -414,10 +438,6 @@ body {
     border-radius: unset;
   }
 
-  #sidebar {
-    margin-left: 60%;
-  }
-
   #content{
     width: 496px;
   }
@@ -428,14 +448,11 @@ body {
 
   .titlePrimaryBlock {
     width: 460px;
-    padding: 5px 0px 5px 5px;
-    border-top-left-radius: unset;
-    border-top-right-radius: unset;
-    background : unset;
+    padding: 5px 0px;
   }
-  
-  .titlePrimaryBlock h1 a{
-    color: #ec1529;
+
+  .titlePrimaryBlock h1 {
+    padding-left: 5px;
   }
 
   .imgPrimaryBlock {
@@ -500,7 +517,7 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
+@media all and (max-width: 768px) {
 
   #pre-header {
     width: 100%;
@@ -571,7 +588,9 @@ body {
   }
 
   #sidebar {
-    margin-left: 51%;
+    width: 48%;
+    overflow: hidden;
+    margin-left: 5%;
   }
 
   img[alt="contactez Montceau-news"] {
@@ -583,7 +602,7 @@ body {
   }
 
   .sidebar_pubs a img {
-    width: 80%;
+    width: 90%;
     height: auto;
   }
 
@@ -596,11 +615,16 @@ body {
     width: 100%;
     height: auto;
   }
-  /*
-  #sidebar {
-    margin-left: 51%;
+  
+  .sidebar_pubs>* {
+    border:1 px solid;
   }
-  */
+
+  .navigation {
+    width: 199%;
+    margin-left: unset;
+  }
+  
 }
 
 
