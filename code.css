@@ -105,6 +105,7 @@ body {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
+  overflow: hidden;
 }
 
 .slidhead 
@@ -208,7 +209,7 @@ body {
 #sidebar h3 { 
   width: max-content;
   font-family: sans-serif;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 
 #frame
