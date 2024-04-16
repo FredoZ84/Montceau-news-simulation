@@ -311,6 +311,71 @@ body {
 {
   background-color: #717171;
 }
+/*Modal*/
+
+#modal {
+  display: none;
+}
+
+#modal.show {
+  display: block;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color:#30303080 ;
+  top: 0px;
+  left:0px;
+  z-index: 1;
+}
+
+body {
+  margin: 0px;
+}
+
+.modal-content {
+  position: absolute;
+  margin: auto;
+  width: 20%;
+  margin-top: 25vh;
+  margin-left: 40%;
+  background-color: white;
+  border-radius: 16px;
+  padding: 16px;
+  padding-right: 30px;
+  word-break: wrap;
+  z-index: 1;
+}
+
+.modal-content .fa-xmark {
+  position: absolute;
+  top:15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.modal-content h1 {
+  font-size: 26px;
+  font-weight: bold;
+  font-style: italic;
+  color: #ec1529;
+  margin-bottom: 5px;
+}
+
+.modal-content p,  {
+  font-size: 15px;
+}
+
+.modal-content i {
+  font-size: 26px;
+  margin: 5px auto;
+}
+
+.modal-content i.rotate-mobile {
+  transform: rotate(90deg);
+}
 
 @media screen and (max-width: 1110px) {
   #header_top {
@@ -356,6 +421,7 @@ body {
 
   .contentPrimaryBlock {
     width: 250px;
+    z-index: 0;
   }
 
   .bkgrdBlock {
