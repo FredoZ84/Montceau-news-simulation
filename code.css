@@ -717,10 +717,30 @@ body {
   #Montceaunews_MTF_300x250_4-iframe-container iframe,
   #Montceaunews_MTF_300x250_6-iframe-container,
   #Montceaunews_MTF_300x250_6-iframe-container iframe,
-  .akcelo-native-block {
+  .akcelo-native-block
+  .ad .products .product a .ad-image img,
+  #container-300x600 .item--image,
+  #container-300x600 .item--logo,
+  #container-300x600 .item--logo img,
+  #container-300x600 .item--image .ad-image, 
+  #container-300x600 .item--content,
+  #container-300x600 .item--cta,
+  .container {
     width: 90% !important;
     height: 90% !important;
   }
+
+  /*
+  .ad .products .product a .ad-image img,
+  #container-300x600 .item--image,
+  #container-300x600 .item--logo,
+  #container-300x600 .item--logo img,
+  #container-300x600 .item--image .ad-image, 
+  #container-300x600 .item--content,
+  #container-300x600 .item--cta,
+  .container,
+  
+  */
   
 }
 
