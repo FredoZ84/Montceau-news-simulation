@@ -589,8 +589,7 @@ body {
   }
 }
 
-
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
   #pre-header {
     width: 100%;
@@ -696,6 +695,24 @@ body {
   .navigation {
     width: 199%;
     margin-left: unset;
+  }
+
+  #Montceaunews_MTF_300x600_1-iframe-container,
+  #Montceaunews_MTF_300x600_1-iframe-container iframe,
+  #Montceaunews_MTF_300x600_2-iframe-container
+  #Montceaunews_MTF_300x600_2-iframe-container iframe,
+  #Montceaunews_MTF_300x600_3-iframe-container
+  #Montceaunews_MTF_300x600_3-iframe-container iframe,
+  #Montceaunews_MTF_300x600_4-iframe-container
+  #Montceaunews_MTF_300x600_4-iframe-container iframe,
+  #Montceaunews_MTF_300x600_5-iframe-container
+  #Montceaunews_MTF_300x600_5-iframe-container iframe,
+  #Montceaunews_MTF_300x600_6-iframe-container
+  #Montceaunews_MTF_300x600_6-iframe-container iframe,
+  #Montceaunews_MTF_300x600_7-iframe-container
+  #Montceaunews_MTF_300x600_7-iframe-container iframe,
+  .akcelo-native-block {
+    width: 90%;
   }
   
 }

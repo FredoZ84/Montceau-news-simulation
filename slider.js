@@ -105,7 +105,6 @@ window.onload = () => {
 
 function alternate() {
 	nb++
-	console.log(nb)
 	startTimer()
 	setTimeout(() => {
 		stopTimer()
