@@ -15,9 +15,7 @@ function detection() {
         } else {
             modal.hide()
         }
-    } )
-
-
+    })
 }
 
 detection()
@@ -32,11 +30,20 @@ let iframeContainer = document.getElementById("Montceaunews_MTF_728x90_779153-if
 
 let iframes = document.querySelectorAll("#sidebar iframe")
 let iframesImg =  document.querySelectorAll("#sidebar iframe img")
+
 for (let index = 0; index < iframes.length; index++) {
     let element = iframes[index];
     element.width = element.width * 0.2
     element.height = element.height * 0.2
     //console.log(element.width)
 
+}
 
+for (let index = 0; index < sidebarPubs.length; index++) {
+    let element = sidebarPubs[index];
+
+    element.style.width =  "90% !important"
+    element.style.height = "90% !important"
+    
+}
 */
