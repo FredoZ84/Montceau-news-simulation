@@ -711,8 +711,15 @@ body {
   #Montceaunews_MTF_300x600_6-iframe-container iframe,
   #Montceaunews_MTF_300x600_7-iframe-container
   #Montceaunews_MTF_300x600_7-iframe-container iframe,
+  #Montceaunews_MTF_300x250_2-iframe-container,
+  #Montceaunews_MTF_300x250_2-iframe-container iframe,
+  #Montceaunews_MTF_300x250_4-iframe-container,
+  #Montceaunews_MTF_300x250_4-iframe-container iframe,
+  #Montceaunews_MTF_300x250_6-iframe-container,
+  #Montceaunews_MTF_300x250_6-iframe-container iframe,
   .akcelo-native-block {
-    width: 90%;
+    width: 90% !important;
+    height: 90% !important;
   }
   
 }
