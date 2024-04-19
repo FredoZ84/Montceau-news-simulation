@@ -747,13 +747,31 @@ body {
     height: 80%;
   }
 
-  #container-300x250 .item--logo, {
+  #container-300x250 .item--logo {
     width: 17%;
     height: 100%;
   }
 
+  #container-300x600 .item--image {
+    width: 44%;
+    height: 66.5%;
+  }
 
-  
+    #container-300x600 .item--content {
+    width: 52%;
+    height: 62%;
+  }
+
+
+  #container-300x600 .item--cta{
+    width: 100%;
+    height: 33%;
+  }
+
+  #container-300x600 .item--logo {
+    width: 22%;
+    height: 33%;
+  } 
 }
 
 
