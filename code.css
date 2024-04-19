@@ -687,10 +687,6 @@ body {
     width: 100%;
     height: auto;
   }
-  
-  .sidebar_pubs>* {
-    border:1 px solid;
-  }
 
   .navigation {
     width: 199%;
@@ -698,40 +694,23 @@ body {
   }
 
   #Montceaunews_MTF_300x600_1-iframe-container,
-  #Montceaunews_MTF_300x600_1-iframe-container iframe,
   #Montceaunews_MTF_300x600_2-iframe-container,
-  #Montceaunews_MTF_300x600_2-iframe-container iframe,
   #Montceaunews_MTF_300x600_3-iframe-container,
-  #Montceaunews_MTF_300x600_3-iframe-container iframe,
   #Montceaunews_MTF_300x600_4-iframe-container,
-  #Montceaunews_MTF_300x600_4-iframe-container iframe,
   #Montceaunews_MTF_300x600_5-iframe-container,
-  #Montceaunews_MTF_300x600_5-iframe-container iframe,
   #Montceaunews_MTF_300x600_6-iframe-container,
-  #Montceaunews_MTF_300x600_6-iframe-container iframe,
   #Montceaunews_MTF_300x600_7-iframe-container,
-  #Montceaunews_MTF_300x600_7-iframe-container iframe,
   #Montceaunews_MTF_300x250_2-iframe-container,
-  #Montceaunews_MTF_300x250_2-iframe-container iframe,
   #Montceaunews_MTF_300x250_4-iframe-container,
-  #Montceaunews_MTF_300x250_4-iframe-container iframe,
-  #Montceaunews_MTF_300x250_6-iframe-container,
-  #Montceaunews_MTF_300x250_6-iframe-container iframe,
-  .akcelo-native-block
-  .ad .products .product a .ad-image img,
-  #container-300x600 .item--image,
-  #container-300x600 .item--logo,
-  #container-300x600 .item--logo img,
-  #container-300x600 .item--image .ad-image, 
-  #container-300x600 .item--content,
-  #container-300x600 .item--cta,
-  .container {
+  #Montceaunews_MTF_300x250_6-iframe-container
+  {
     width: 90% !important;
     height: 90% !important;
   }
 
   /*
-  .ad .products .product a .ad-image img,
+ .akcelo-native-block
+    .ad .products .product a .ad-image img,
   #container-300x600 .item--image,
   #container-300x600 .item--logo,
   #container-300x600 .item--logo img,
@@ -739,6 +718,21 @@ body {
   #container-300x600 .item--content,
   #container-300x600 .item--cta,
   .container,
+  .ad .products .product a .ad-image img 
+    .ad .products .product a .container {
+      width :94%
+
+    }
+
+     .ad .products .product a .container .item--image {
+      width :26%;
+      height: 100%;
+
+    }
+
+   
+  .ad .products .product a .ad-image img,
+  
   
   */
   
