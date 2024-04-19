@@ -727,23 +727,32 @@ body {
     height: 90% !important;
   }
 
-  /*
-    .ad .products .product a .container {
-      width :94%
+  #container-300x250 .ad .products .product a .container {
+    width :98%;
+    height : 90%;
+  }
 
-    }
+   #container-300x250 .item--image {
+    width :21%;
+    height: 100%;
+  }
 
-     .ad .products .product a .container .item--image {
-      width :26%;
-      height: 100%;
+  #container-300x250 .item--content {
+    width: 52%;
+    height: 80%;
+  }
 
-    }
+  #container-300x250 .item--cta {
+    width: 52%;
+    height: 80%;
+  }
 
-   
-  .ad .products .product a .ad-image img,
-  
-  
-  */
+  #container-300x250 .item--logo, {
+    width: 17%;
+    height: 100%;
+  }
+
+
   
 }
 
