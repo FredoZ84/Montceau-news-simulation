@@ -694,38 +694,27 @@ body {
   }
 
   #Montceaunews_MTF_300x600_1-iframe-container,
-  #Montceaunews_MTF_300x600_2-iframe-container,
-  #Montceaunews_MTF_300x600_3-iframe-container,
-  #Montceaunews_MTF_300x600_4-iframe-container,
-  #Montceaunews_MTF_300x600_5-iframe-container,
-  #Montceaunews_MTF_300x600_6-iframe-container,
-  #Montceaunews_MTF_300x600_7-iframe-container,
-  #Montceaunews_MTF_300x250_2-iframe-container,
-  #Montceaunews_MTF_300x250_4-iframe-container,
-  #Montceaunews_MTF_300x250_6-iframe-container
-  {
-    width: 90% !important;
-    height: 90% !important;
-  }
-
   #Montceaunews_MTF_300x600_1-iframe-container iframe,
+  #Montceaunews_MTF_300x600_2-iframe-container,
   #Montceaunews_MTF_300x600_2-iframe-container iframe,
+  #Montceaunews_MTF_300x600_3-iframe-container,
   #Montceaunews_MTF_300x600_3-iframe-container iframe,
+  #Montceaunews_MTF_300x600_4-iframe-container,
   #Montceaunews_MTF_300x600_4-iframe-container iframe,
+  #Montceaunews_MTF_300x600_5-iframe-container,
   #Montceaunews_MTF_300x600_5-iframe-container iframe,
+  #Montceaunews_MTF_300x600_6-iframe-container,
   #Montceaunews_MTF_300x600_6-iframe-container iframe,
+  #Montceaunews_MTF_300x600_7-iframe-container,
   #Montceaunews_MTF_300x600_7-iframe-container iframe,
+  #Montceaunews_MTF_300x250_2-iframe-container,
   #Montceaunews_MTF_300x250_2-iframe-container iframe,
+  #Montceaunews_MTF_300x250_4-iframe-container,
   #Montceaunews_MTF_300x250_4-iframe-container iframe,
-  #Montceaunews_MTF_300x250_6-iframe-container iframe
-  {
-    width: 100% !important;
-    height: 100% !important;
-  }
-
-  /*
- .akcelo-native-block
-    .ad .products .product a .ad-image img,
+  #Montceaunews_MTF_300x250_6-iframe-container,
+  #Montceaunews_MTF_300x250_6-iframe-container iframe,
+  .akcelo-native-block
+  .ad .products .product a .ad-image img,
   #container-300x600 .item--image,
   #container-300x600 .item--logo,
   #container-300x600 .item--logo img,
@@ -733,7 +722,12 @@ body {
   #container-300x600 .item--content,
   #container-300x600 .item--cta,
   .container,
-  .ad .products .product a .ad-image img 
+  .ad .products .product a .ad-image img  {
+    width: 90% !important;
+    height: 90% !important;
+  }
+
+  /*
     .ad .products .product a .container {
       width :94%
 
