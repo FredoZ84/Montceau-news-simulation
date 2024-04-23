@@ -693,16 +693,18 @@ body {
     margin-left: unset;
   }
 
- 
   #Montceaunews_MTF_300x600_1, 
   #Montceaunews_MTF_300x600_2,
   #Montceaunews_MTF_300x600_3,
   #Montceaunews_MTF_300x600_4,
   #Montceaunews_MTF_300x600_5,
   #Montceaunews_MTF_300x600_6,
-  #Montceaunews_MTF_300x600_7, 
+  #Montceaunews_MTF_300x600_7,
+  #Montceaunews_MTF_300x250_2,
+  #Montceaunews_MTF_300x250_4,
+  #Montceaunews_MTF_300x250_6,
   .adsbygoogle {
-    transform: scale(0.9);
+    transform: scale(0.8);
   }
   /*
   #Montceaunews_MTF_300x600_1-iframe-container,
