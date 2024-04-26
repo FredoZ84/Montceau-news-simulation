@@ -15,14 +15,26 @@ body {
   font-family: sans-serif;
 }
 
+header {
+  /*position: fixed;
+  width: 100%;
+  z-index: 1;*/
+  margin-bottom: 10.6px;
+}
+
 #pre-header {
   width: 100% !important;
   background: linear-gradient(#3f3f3f, #262626 50%);
-  height: 200px;
+  height: 173px;
+  /*position: fixed;
+  z-index: 1;
+  margin-bottom: unset;*/
 }
 
 #header_top  {
-  height: 130px;
+  display: flex;
+  align-items: center;
+  height: 100px;
 }
 
 #header_top a {
@@ -31,6 +43,11 @@ body {
 
 #other_blocks {
   display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
+  border-left: 1px solid #222;
+  height: 100%;
 }
 
 #other_blocks>* {
@@ -65,6 +82,7 @@ body {
   background: white;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  margin-left: 12px;
 }
 
 #s::placeholder {
@@ -103,8 +121,16 @@ body {
 
 #firstChild {
   width: 900px;
+  /*position: fixed;
+  top: 225px;
+  z-index: 1;*/
 }
-
+/*
+#bg {
+  position: relative;
+  top:450px;
+}
+*/
 #page {
   display: flex;
   flex-wrap: nowrap;
@@ -198,6 +224,7 @@ body {
 
 .imgPrimaryBlock  {
     position: relative;
+    z-index: 0;
     width: 700px;
     height: 340px;
     overflow: hidden;
@@ -393,6 +420,14 @@ body {
   flex-wrap: wrap;
 }
 
+#footer {
+  padding-top: 35px;
+}
+
+#sidebar {
+  overflow: hidden;
+} 
+
 @media screen and (max-width: 1110px) {
   #header_top {
     width: 100%;
@@ -471,17 +506,11 @@ body {
   #header_top  {
     display: flex;
   }
-
-  #header_top img {
-    margin: 30px 0 0 0;
-  }
-
+  /*
   #other_blocks {
-    flex-wrap: wrap;
-    align-items: center;
-    border-left: 1px solid #222;
-  }
 
+  }
+  */
   #s {
     margin-left: 15px;
   }
@@ -506,8 +535,16 @@ body {
 }
 
 @media screen and (max-width:945px) {
+  #pre-header {
+    height: 242px;
+  }
   #firstChild, #banniere-haut {
-    width: 95% !important;
+    width: 100% !important;
+  }
+
+  #menu_list #cat_parent, #menu_list #cat_parent_2 {
+    flex-wrap: wrap;
+    height: 72px;
   }
 
   .element>a>img {
@@ -562,26 +599,17 @@ body {
 
 @media screen and (max-width:900px) {
 
-  #pre-header {
-    height: 255px;
-}
-
   #header_top img {
     width: 100%;
-    margin: 40px 0 0 0;
-  }
-
-  #menu_list #cat_parent, #menu_list #cat_parent_2 {
-    flex-wrap: wrap;
-    height: 72px;
+    margin: unset;
   }
 
   #banniere-haut {
-    width: 90%;
+    width: 100%;
   }
 
   .element>a>img {
-    width: 90%;
+    width: 100%;
     height: auto;
   }
 }
@@ -599,18 +627,22 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  header {
+    margin-bottom: -1%;
+  }
+
+  header + br {
+    display: none;
+  }
 
   #pre-header {
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: unset;
+    height: 245px;
   }
 
   #header_top a {
     width: 40%;
-  }
-
-  #header_top img {
-    width: 90%;
   }
 
   #other_blocks {
@@ -622,6 +654,18 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+  }
+
+  #sidebar img[alt="contactez Montceau-news"] {
+    width: 90%;
+  }
+
+  #sidebar #nbviews {
+    background: #f0f0f0;
+    width: 90%;
+    border-radius: 5px;
+    margin: 15px auto;
+    box-shadow: 5px 5px 5px lightgrey;
   }
 }
 
@@ -686,10 +730,6 @@ body {
     width: 48%;
     overflow: hidden;
     margin-left: 5%;
-  }
-
-  img[alt="contactez Montceau-news"] {
-    width: 80%;
   }
 
   .sidebar_pubs {
@@ -822,7 +862,12 @@ body {
 }
 
 @media screen and (max-width: 481px) {
-  #header_top img, #other_blocks {
+
+  #header_top img {
+    width: 80%;
+  }
+
+   #other_blocks {
     width: 100%;
   }
 
@@ -853,6 +898,46 @@ body {
 
   #menu_list>*>li {
     font-size: 10px;
+  }
+
+  .titlePrimaryBlock h1 {
+    font-size: 20px;
+  }
+
+  .imgPrimaryBlock {
+    height: 350px;
+  }
+
+  .imgPrimaryBlock img {
+    height: 130px;
+  }
+
+  .contentPrimaryBlock {
+    top: 130px;
+  }
+
+  .contentPrimaryBlock .justContent h3 {
+    font-size: 16px;
+    height: 70px;
+  }
+
+  .contentPrimaryBlock .justContent p .text {
+    font-size: 14px;
+    height: 70px;
+  }
+
+  .nosticky {
+    font-size: 20px !important;
+  }
+
+  .post h3 {
+    font-size: 16px;
+  }
+
+
+  #sidebar h3 {
+    width: 90%;
+    font-size: 15px;
   }
 }
 
