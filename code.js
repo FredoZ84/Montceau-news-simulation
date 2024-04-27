@@ -47,3 +47,20 @@ for (let index = 0; index < sidebarPubs.length; index++) {
     
 }
 */
+
+function testInsertion(){
+    let head  = document.querySelector("head")
+    console.log(head)
+
+    /*	<script defer src="https://fredoz84.github.io/Montceau-news-simulation/sliderPubsConfiguration.js"></script>
+		<script defer src="https://fredoz84.github.io/Montceau-news-simulation/slider.js"></script>
+		<script defer src="https://fredoz84.github.io/Montceau-news-simulation/header.js"></script>
+		<script defer src="https://fredoz84.github.io/Montceau-news-simulation/recentNewsPost.js"></script>
+		<script defer src="https://fredoz84.github.io/Montceau-news-simulation/footer.js"></script>
+        <script defer src="https://fredoz84.github.io/code.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css?_cacheOverride=1713172580443">
+		<link rel="stylesheet" href="https://fredoz84.github.io/code.css">
+    */
+
+
+}

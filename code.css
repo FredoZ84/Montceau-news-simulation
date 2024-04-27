@@ -426,7 +426,7 @@ body {
 
 #sidebar {
   overflow: hidden;
-} 
+}
 
 @media screen and (max-width: 1110px) {
   #header_top {
@@ -674,6 +674,22 @@ body {
     border-radius: 5px;
     margin: 15px auto;
     box-shadow: 5px 5px 5px lightgrey;
+  }
+
+    /* Page d'article*/
+
+  .post>h2 {
+    font-size: 20px;
+  }
+
+  .post>h3 {
+    font-size: 16px !important;
+  }
+
+  ins.adsbygoogle {
+    transform-origin: top left;
+    transform: scale(45%);
+    margin-bottom: -170px;
   }
 }
 
