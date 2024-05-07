@@ -911,20 +911,26 @@ body {
     width: 98%;
   }
 
+  .primaryBlock {
+    width: 95%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
   .titlePrimaryBlock h1 {
     font-size: 20px;
   }
 
   .imgPrimaryBlock {
-    height: 350px;
+    height: 450px;
   }
 
   .imgPrimaryBlock img {
-    height: 130px;
+    height: 220px;
   }
 
   .contentPrimaryBlock {
-    top: 130px;
+    top: 220px;
   }
 
   .contentPrimaryBlock .justContent h3 {
@@ -935,8 +941,9 @@ body {
   .contentPrimaryBlock .justContent p .text {
     font-size: 14px;
     height: 120px;
+    text-align: justify;
   }
-
+  
   .post {
     display: flex;
     flex-direction: column;
@@ -963,15 +970,26 @@ body {
   #sidebar h3 {
     width: 90%;
     font-size: 15px;
-  } 
+  }
+
+  
+  .sidebar_pubs_Internal {
+    display: block !important;
+    background-color: aquamarine;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 85%;
+    margin: 0 auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 
   .sidebar_pubs_Internal img{
     border: 1px solid;
     display: block;
-    width: 50%;
+    width: 56%;
     height: auto;
     margin: 0 auto;
-    margin-bottom: 20px;
   }
 }
 

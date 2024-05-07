@@ -65,7 +65,6 @@ for (let index = 0; index < sidebarPubsInternal.length; index++) {
     element.classList.add("sidebar_pubs_Internal")
 
     slidhead.insertBefore(element,slidhead.children[index+index+1])
-    console.log(index + index+ 1)
     
 }
 
