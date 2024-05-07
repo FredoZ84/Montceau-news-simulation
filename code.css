@@ -41,6 +41,10 @@ header {
   display: block;
 }
 
+#header_top #icon_menu {
+  display: none;
+}
+
 #other_blocks {
   display: flex;
   align-items: center;
@@ -117,6 +121,10 @@ header {
 
 #menu_list #cat_parent_2 {
   background: linear-gradient(#d42e2d, #8b1919);
+}
+
+#menu_list #close_menu {
+  display: none;
 }
 
 #firstChild {
@@ -238,7 +246,7 @@ header {
 #sidebar { 
   padding: unset;
   padding-left: 5px;
-  margin-left: 1%;
+  margin-left: -1%;
   text-align: center;
 }
 
@@ -451,6 +459,7 @@ body {
 
   #sidebar {
     background: unset;
+    /*margin-left: 10%;*/
   }
 
   .slidhead {
@@ -488,16 +497,16 @@ body {
   }
 
   .justContent p .text {
-    height: 140px;
+    height: 210px;
   }
 
-  .justContent p br {
+  .justContent p br, .justContent .addtoany_list  {
     display: none;
   }
 
   .pubs a img {
-    width: 584px;
-    height: 167px;
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -534,7 +543,7 @@ body {
   }
 }
 
-@media screen and (max-width:945px) {
+@media screen and (max-width:975px) {
   #pre-header {
     height: 242px;
   }
@@ -576,11 +585,11 @@ body {
 
   .imgPrimaryBlock {
     width: 470px;
-    height: 525px;
+    height: 500px;
   }
 
   .imgPrimaryBlock img {
-    height: 235px;
+    height: 160px;
     width: 100%;
     object-fit: cover;
     border-bottom-left-radius: unset;
@@ -589,11 +598,15 @@ body {
 
   .contentPrimaryBlock {
     width: 470px;
-    top:233px
+    top:160px
   }
 
   .bkgrdBlock {
     width: 200px;
+  }
+
+  .justContent a {
+    padding-top: unset;
   }
 }
 
@@ -612,6 +625,18 @@ body {
     width: 100%;
     height: auto;
   }
+
+  #page {
+    justify-content: start;
+  }
+
+  .postmetadata, .post .addtoany_list {
+    display: none;
+  }
+
+  .post h2.nosticky {
+    font-size: 20px !important;
+  }
 }
 
 @media screen and (max-width: 856px) {
@@ -625,6 +650,32 @@ body {
     height: auto;
   }
   */
+}
+
+@media screen and (max-width: 835px){
+  .slidhead, .primaryBlock, .titlePrimaryBlock , .imgPrimaryBlock, .contentPrimaryBlock, .post {
+    width: 100%;
+  }
+
+  #sidebar {
+    margin-left: 1%;
+  }
+
+  #sidebar img[alt="contactez Montceau-news"] {
+    width: 90%;
+  }
+
+  #sidebar .sidebar_pubs a img {
+    width: 95%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  
+  #sidebar>.sidebar_pubs>div>div,#sidebar>.sidebar_pubs>ins.adsbygoogle>* {
+    transform-origin: top left;
+    /*transform: scale(0.9);*/
+    border: 1px solid !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -664,10 +715,6 @@ body {
     min-height: unset;
   }
 
-  #sidebar img[alt="contactez Montceau-news"] {
-    width: 90%;
-  }
-
   #sidebar #nbviews {
     background: #f0f0f0;
     width: 90%;
@@ -685,12 +732,13 @@ body {
   .post>h3 {
     font-size: 16px !important;
   }
-
+  /*
   ins.adsbygoogle {
     transform-origin: top left;
     transform: scale(45%);
     margin-bottom: -170px;
   }
+  */
 }
 
 @media screen and (max-width: 708px) {
@@ -731,8 +779,6 @@ body {
   #s::placeholder {
     color: grey;
   }
-
-
   #site_selector {
     margin-left: 30px;
   }
@@ -744,10 +790,6 @@ body {
 
   #content {
     width: 50%;
-  }
-
-  .slidhead, .primaryBlock, .titlePrimaryBlock , .imgPrimaryBlock, .contentPrimaryBlock {
-    width: 100%;
   }
 
   #sidebar {
@@ -764,23 +806,6 @@ body {
     display: block;
     height: max-content !important;
     margin-bottom: 70px;
-  }
-    
-  #sidebar .sidebar_pubs>*>*{
-    transform-origin: top left;
-    transform: scale(55%) translateX(-15px);
-    margin-bottom: -110%;
-  }
-  
-  /*
-  .sidebar_pubs a img {
-    width: 90%;
-    height: auto;
-  }
-  */
-  .pubs a img {
-    width: 100%;
-    height: auto;
   }
 
   .post img {
@@ -802,10 +827,24 @@ body {
 
   #header_top img {
     width: 80%;
+    margin: 5px 0;
   }
 
-   #other_blocks {
-    width: 100%;
+  #header_top #icon_menu {
+    display: inline;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: 20px;
+  }
+
+  #pre-header, #header_top  {
+    height: auto;
+  }
+
+  #other_blocks {
+    display: none;
+    /*width: 100%;*/
   }
 
   #site_selector {
@@ -826,17 +865,50 @@ body {
     margin-top: 5px;
   }
 
-  #menu_list #cat_parent li {
-    padding: 0px;
+  #menu_list {
+    display: none;/* apparition au click */
+    width: 100%;
+    height: 73px;
+    position: absolute;
+    top:0;
+    z-index: 1;
   }
 
-  #menu_list #cat_parent_2 li {
-    padding: 0px;
-    margin: 0 4px;
+  #menu_list #cat_parent {
+    width: 50%;
+    flex-direction: column;
+    position: relative;
+    height: fit-content;
+    background-color: #372f2f ;
+  }
+
+  #menu_list #cat_parent_2 {
+    width: 50%;
+    flex-direction: column;
+    position: relative;
+    height: fit-content;
+  }
+
+  .logo_menu {
+    margin-bottom: 0px;
+    margin-top: 18px;
+    /* border: 1px solid; */
   }
 
   #menu_list>*>li {
     font-size: 10px;
+  }
+
+  #menu_list #close_menu {
+    display: inline;
+    position: absolute;
+    top :10px;
+    left:10px;
+    font-size: 20px;
+  }
+
+  #content {
+    width: 98%;
   }
 
   .titlePrimaryBlock h1 {
@@ -857,32 +929,50 @@ body {
 
   .contentPrimaryBlock .justContent h3 {
     font-size: 16px;
-    height: 70px;
+    height: 35px;
   }
 
   .contentPrimaryBlock .justContent p .text {
     font-size: 14px;
-    height: 65px;
+    height: 120px;
+  }
+
+  .post {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post img {
+    width: unset;
   }
 
   .nosticky {
     font-size: 20px !important;
+    margin-top: 20px;
   }
 
   .post h3 {
     font-size: 16px;
   }
 
+  #sidebar  {
+    display: none;
+  } 
+
 
   #sidebar h3 {
     width: 90%;
     font-size: 15px;
   } 
-  /*
-  #sidebar .sidebar_pubs>*>* {
-    transform: scale(90%);
+
+  .sidebar_pubs_Internal img{
+    border: 1px solid;
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
   }
-  */
 }
 
 @media screen and (max-width: 352px) {

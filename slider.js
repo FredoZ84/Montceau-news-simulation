@@ -51,12 +51,12 @@ window.onload = () => {
 	window.addEventListener("resize", () => {
 		slidesWidth = slider.getBoundingClientRect().width ;
 		slideNext();
-		console.log("changement de taille");
+		//console.log("changement de taille");
 		if("matchMedia" in window) { // Détection
 		    if(window.matchMedia("(max-width: 992px)").matches) {
 		      slidesWidth = slider.getBoundingClientRect().width ;
 				slideNext();
-				console.log("changement de règle CSS media querries");
+				//console.log("changement de règle CSS media querries");
 		    } else {
 		      console.log("retour à la règle CSS initiale");
 		    }
