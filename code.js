@@ -11,12 +11,13 @@ function detection() {
     let sidebarPubsExternal = document.querySelectorAll("#sidebar>.sidebar_pubs>div>div,#sidebar>.sidebar_pubs>ins.adsbygoogle>*")
 
     sidebarPubsAdaptation(sidebarPubsExternal,835)
-
+/*
     for (let index = 0; index < sidebarPubsExternal.length; index++) {
         const element = sidebarPubsExternal[index];
         console.log(element)
         
     }
+    */
 
     window.addEventListener("resize",() => {
 
@@ -64,11 +65,21 @@ for (let index = 0; index < sidebarPubsInternal.length; index++) {
     let element = sidebarPubsInternal[index];
     element.classList.add("sidebar_pubs_Internal")
 
-    slidhead.insertBefore(element,slidhead.children[index+index+1])
+    let container = document.createElement("div")
+    container.classList.add("sidebar_pubs_Internal_container")
     
-}
+    slidhead.insertBefore(container,slidhead.children[index+index+1])
+    container.appendChild(element.cloneNode(true))    
 
-    
+}
+/*
+console.log(slidhead.lastChild)
+
+slidhead.lastChild.addEventListener("mouseenter",()=>{
+    console.log("ok")
+})
+
+  */  
 
 /*
 id page accueil = 174196af0c2d08889
