@@ -81,6 +81,17 @@ function reconfiguration() {
     closOtherBlocks.addEventListener("click",()=> {
         otherBlocks.style.display ="none"
     })
+
+    window.addEventListener("resize", ()=> {
+        if (innerWidth > 481) {
+            menuList.style.display ="block"
+            otherBlocks.style.display ="flex"
+        } else if ((innerWidth <= 481)) {
+            menuList.style.display ="none"
+            otherBlocks.style.display ="none"
+        }
+
+    })
     
     
 }

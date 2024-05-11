@@ -41,7 +41,7 @@ header {
   display: block;
 }
 
-#header_top #icon_menu {
+#header_top #icon_menu, #header_top #other_blocks_icons, #other_blocks #close_others_blocks {
   display: none;
 }
 
