@@ -24,6 +24,17 @@ function reconfiguration() {
     otherBlocks.appendChild(searchBlock)
     otherBlocks.appendChild(wBlock)
 
+    // Creation d'un icone menu pour les mobiles
+    let iconMenu = document.createElement("i")
+    iconMenu.id = "icon_menu"
+    iconMenu.classList.add("fa-solid")
+    iconMenu.classList.add("fa-bars")
+    headerTop.appendChild(iconMenu)
+
+    iconMenu.addEventListener("click",()=> {
+        menuList.style.display ="flex"
+    })
+
     // Creation d'une icon pour la fermeture du menu
     let menuList = document.getElementById("menu_list")
 
@@ -37,16 +48,41 @@ function reconfiguration() {
        menuList.style.display ="none"
     })
 
-    // Creation d'un icone menu pour les mobiles
-    let iconMenu = document.createElement("i")
-    iconMenu.id = "icon_menu"
-    iconMenu.classList.add("fa-solid")
-    iconMenu.classList.add("fa-bars")
-    headerTop.appendChild(iconMenu)
 
-    iconMenu.addEventListener("click",()=>{
-        menuList.style.display ="flex"
+    // Creation d'un icone des autres block pour les mobiles
+    let otherBlocksIcons = document.createElement("div")
+    otherBlocksIcons.id = "other_blocks_icons"
+    headerTop.appendChild(otherBlocksIcons)
+
+    // Creation d'un icone de recherche
+    let iconResearch = document.createElement("i")
+        iconResearch.id = "icon_research"
+        iconResearch.classList.add("fa-solid")
+        iconResearch.classList.add("fa-magnifying-glass")
+    otherBlocksIcons.appendChild(iconResearch)
+
+    // Creation d'un icone de recherche
+    let iconOtherNewspaper = document.createElement("i")
+        iconOtherNewspaper.id = "icon_menu_newspaper"
+        iconOtherNewspaper.classList.add("fa-solid")
+        iconOtherNewspaper.classList.add("fa-newspaper")
+    otherBlocksIcons.appendChild(iconOtherNewspaper)
+
+    otherBlocksIcons.addEventListener("click",()=>{
+        otherBlocks.style.display ="flex"
     })
+
+    let closOtherBlocks = document.createElement("i")
+    closOtherBlocks.id = "close_others_blocks"
+    closOtherBlocks.classList.add("fa-solid")
+    closOtherBlocks.classList.add("fa-xmark")
+    otherBlocks.appendChild(closOtherBlocks)
+
+    closOtherBlocks.addEventListener("click",()=> {
+        otherBlocks.style.display ="none"
+    })
+    
+    
 }
 
 reconfiguration()

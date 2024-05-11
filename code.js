@@ -46,7 +46,7 @@ function sidebarPubsAdaptation(sidebarPubs, referenceWidth) {
             let widthValueObjective = window.innerWidth*multiplier // objectif de valeur de largeur      
             let scaleValue = widthValueObjective/element.clientWidth
 
-            console.log(scaleValue)
+            //console.log(scaleValue)
 
 
             element.style.transform =`scale(${scaleValue})`
