@@ -25,11 +25,7 @@ function reconfiguration() {
     otherBlocks.appendChild(wBlock)
 
     // Creation d'un icone menu pour les mobiles
-    let iconMenu = document.createElement("i")
-    iconMenu.id = "icon_menu"
-    iconMenu.classList.add("fa-solid")
-    iconMenu.classList.add("fa-bars")
-    headerTop.appendChild(iconMenu)
+    let iconMenu = iconCreate("icon_menu","fa-bars",headerTop)
 
     iconMenu.addEventListener("click",()=> {
         menuList.style.display ="flex"
@@ -37,12 +33,7 @@ function reconfiguration() {
 
     // Creation d'une icon pour la fermeture du menu
     let menuList = document.getElementById("menu_list")
-
-    let closeMenu = document.createElement("i")
-        closeMenu.id = "close_menu"
-        closeMenu.classList.add("fa-solid")
-        closeMenu.classList.add("fa-xmark")
-        menuList.appendChild(closeMenu)
+    let closeMenu = iconCreate("close_menu","fa-xmark",menuList)
 
     closeMenu.addEventListener("click",()=>{
        menuList.style.display ="none"
@@ -55,44 +46,48 @@ function reconfiguration() {
     headerTop.appendChild(otherBlocksIcons)
 
     // Creation d'un icone de recherche
-    let iconResearch = document.createElement("i")
-        iconResearch.id = "icon_research"
-        iconResearch.classList.add("fa-solid")
-        iconResearch.classList.add("fa-magnifying-glass")
-    otherBlocksIcons.appendChild(iconResearch)
+    let iconResearch = iconCreate("icon_research","fa-magnifying-glass",headerTop)
 
-    // Creation d'un icone de recherche
-    let iconOtherNewspaper = document.createElement("i")
-        iconOtherNewspaper.id = "icon_menu_newspaper"
-        iconOtherNewspaper.classList.add("fa-solid")
-        iconOtherNewspaper.classList.add("fa-newspaper")
-    otherBlocksIcons.appendChild(iconOtherNewspaper)
-
-    otherBlocksIcons.addEventListener("click",()=>{
+    iconResearch.addEventListener("click",()=>{
         otherBlocks.style.display ="flex"
+        searchBlock.style.display = "flex"
     })
 
-    let closOtherBlocks = document.createElement("i")
-    closOtherBlocks.id = "close_others_blocks"
-    closOtherBlocks.classList.add("fa-solid")
-    closOtherBlocks.classList.add("fa-xmark")
-    otherBlocks.appendChild(closOtherBlocks)
+    // Creation d'un icone pour les autres journaux
+    let iconOtherNewspaper = iconCreate("icon_menu_newspaper","fa-newspaper",headerTop)
+
+    iconOtherNewspaper.addEventListener("click",()=>{
+        otherBlocks.style.display ="flex"
+        wBlock.style.display = "flex"
+    })
+
+    let closOtherBlocks = iconCreate("close_others_blocks","fa-xmark",otherBlocks)
 
     closOtherBlocks.addEventListener("click",()=> {
         otherBlocks.style.display ="none"
+        searchBlock.style.display = "none"
+        wBlock.style.display = "none"
     })
 
     window.addEventListener("resize", ()=> {
-        if (innerWidth > 481) {
+        if (innerWidth > 768) {
             menuList.style.display ="block"
             otherBlocks.style.display ="flex"
-        } else if ((innerWidth <= 481)) {
+        } else if ((innerWidth <= 768)) {
             menuList.style.display ="none"
             otherBlocks.style.display ="none"
         }
+    })  
+}
 
-    })
-    
+function iconCreate(id,iconName,parent) {
+    let icon = document.createElement("i")
+    icon.id = id
+    icon.classList.add("fa-solid")
+    icon.classList.add(iconName)
+    parent.appendChild(icon)
+
+    return icon
     
 }
 
