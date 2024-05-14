@@ -69,7 +69,7 @@ function reconfiguration() {
         wBlock.style.display = "none"
     })
 
-    window.addEventListener("resize", ()=> {
+    /*window.addEventListener("resize", ()=> {
         if (innerWidth > 768) {
             menuList.style.display ="block"
             otherBlocks.style.display ="flex"
@@ -77,7 +77,7 @@ function reconfiguration() {
             menuList.style.display ="none"
             otherBlocks.style.display ="none"
         }
-    })  
+    })  */
 }
 
 function iconCreate(id,iconName,parent) {
