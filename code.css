@@ -682,7 +682,7 @@ body {
   #sidebar>.sidebar_pubs>div>div,#sidebar>.sidebar_pubs>ins.adsbygoogle>* {
     transform-origin: top left;
     /*transform: scale(0.9);*/
-    border: 1px solid !important;
+    /*border: 1px solid !important;*/
   }
 }
 
@@ -865,14 +865,28 @@ body {
   }
 
   #content {
-    width: 50%;
+    width: 60%;
   }
 
   #sidebar {
-    width: 48%;
+    width: 40%;
     overflow: hidden;
     margin-left: 5%;
   }
+
+  #sidebar h3 {
+    width: 95%;
+    font-size: 16px;
+  }
+
+  #sidebar img[alt="contactez Montceau-news"] {
+    width: 100%;
+  }
+
+  #sidebar #nbviews {
+    padding-top: 10px;
+  }
+
 
   .sidebar_pubs {
     text-align: start; 
@@ -883,6 +897,31 @@ body {
     height: max-content !important;
     margin-bottom: 70px;
   }
+
+  #sidebar .sidebar_pubs a img {
+    margin-bottom: -40px;
+  }
+
+  .titlePrimaryBlock {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
+  .titlePrimaryBlock h1 {
+    padding-left: 10px;
+    font-size: 20px;
+  }
+
+  .imgPrimaryBlock {
+    height: 495px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+
+  .justContent p .text {
+    font-size: 13px;
+    height: 200px;
+  } 
 
   .post img {
     width: 100%;
@@ -928,7 +967,7 @@ body {
   #menu_list>*>li {
     font-size: 10px;
   }
-
+  /*
   #content {
     width: 98%;
   }
@@ -965,16 +1004,16 @@ body {
     height: 120px;
     text-align: justify;
   }
-  
+  */
   .post {
     display: flex;
     flex-direction: column;
   }
-
+  /*
   .post img {
     width: unset;
   }
-
+  */
   .nosticky {
     font-size: 20px !important;
     margin-top: 20px;
@@ -984,7 +1023,7 @@ body {
     font-size: 16px;
     width: 95%;
   }
-
+  /*
   #sidebar  {
     display: none;
   } 
@@ -1016,7 +1055,7 @@ body {
     display: block;
     width: 100%;
     height: auto;
-  }
+  }*/
 }
 
 @media screen and (max-width: 352px) {

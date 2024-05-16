@@ -69,6 +69,9 @@ function reconfiguration() {
         wBlock.style.display = "none"
     })
 
+    // Creation de la zone
+    //let contactUS = iconCreate("close_others_blocks","fa-envelope",headerTop)
+
     /*window.addEventListener("resize", ()=> {
         if (innerWidth > 768) {
             menuList.style.display ="block"

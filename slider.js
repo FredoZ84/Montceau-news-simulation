@@ -28,13 +28,13 @@ window.onload = () => {
 	//prev.addEventListener("click", slidePrev);
 
 	//Automatiser le diaporama
-	alternate()
+	/*alternate()
 	let numberOfRepetition = 30
 	for (let index = 0; index < numberOfRepetition; index++) {
 		setTimeout(()=>{
 			alternate()
 		},((slides.length-1)*timeMilli+timeMilli)*2*(index+1))	
-	}
+	}*/
 	dotActive();
 
 	// gerer le survol de la souris
