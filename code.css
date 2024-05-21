@@ -932,6 +932,16 @@ body {
     width: 100%;
     margin-left: unset;
   }
+
+  .pub-deb-article {
+    float: unset !important;
+    margin: 0 auto;
+  }
+
+ .post .entry    .pub-deb-article  .adsbygoogle{
+    border: 1px solid;
+    transform: scale(0.9);
+  }
 }
 
 @media screen and (max-width: 481px) {

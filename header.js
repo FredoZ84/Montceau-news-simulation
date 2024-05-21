@@ -39,12 +39,6 @@ function reconfiguration() {
        menuList.style.display ="none"
     })
 
-
-    // Creation d'un icone des autres block pour les mobiles
-    let otherBlocksIcons = document.createElement("div")
-    otherBlocksIcons.id = "other_blocks_icons"
-    headerTop.appendChild(otherBlocksIcons)
-
     // Creation d'un icone de recherche
     let iconResearch = iconCreate("icon_research","fa-magnifying-glass",headerTop)
 

@@ -1,29 +1,21 @@
-function detection() {    
-    /*let modal = new Modal(document.getElementById("modal"))
+function detection() {
 
-    // si ton height est plus grand que ton width alors conseil
-    if (screen.width < screen.height) {
-        modal.show()
-    } else {
-        modal.hide()
-    }*/
+    const referenceWidth = 835
 
-    let sidebarPubsExternal = document.querySelectorAll("#sidebar>.sidebar_pubs>div>div,#sidebar>.sidebar_pubs>ins.adsbygoogle>*")
-
-    sidebarPubsAdaptation(sidebarPubsExternal,835)
-/*
-    for (let index = 0; index < sidebarPubsExternal.length; index++) {
-        const element = sidebarPubsExternal[index];
-        console.log(element)
-        
-    }
-    */
+    sidebarPubsAdaptation(referenceWidth)
 
     window.addEventListener("resize",() => {
 
-        sidebarPubsAdaptation(sidebarPubsExternal,835)
+        sidebarPubsAdaptation(referenceWidth)
      
     })
+
+    const mutationObserver = new MutationObserver(entries => {
+        console.log(entries)
+        sidebarPubsAdaptation(referenceWidth)
+      })
+      const sidebar = document.querySelector("#sidebar")
+      mutationObserver.observe(sidebar, {childList:true, subtree:true})
    
     
 }
@@ -35,19 +27,23 @@ function sidebarPubsIteration() {
     }
 }
 
-function sidebarPubsAdaptation(sidebarPubs, referenceWidth) {
+function sidebarPubsAdaptation(referenceWidth) {
+
+    let sidebarPubsExternalText ="#sidebar>.sidebar_pubs>div>div,#sidebar>.sidebar_pubs>ins.adsbygoogle>*"
+
+    let sidebarPubsExternal = document.querySelectorAll(sidebarPubsExternalText)
+
 
     if (window.innerWidth < referenceWidth) {
             
-        for (let index = 0; index < sidebarPubs.length; index++) {
+        for (let index = 0; index < sidebarPubsExternal.length; index++) {
 
-            let element = sidebarPubs[index]
+            let element = sidebarPubsExternal[index]
             let multiplier = element.clientWidth/referenceWidth // coefficient multiplicateur
             let widthValueObjective = window.innerWidth*multiplier // objectif de valeur de largeur      
             let scaleValue = widthValueObjective/element.clientWidth
 
             //console.log(scaleValue)
-
 
             element.style.transform =`scale(${scaleValue})`
             //element.style.marginBottom = `${-ecart*4-10}px`         
@@ -57,7 +53,7 @@ function sidebarPubsAdaptation(sidebarPubs, referenceWidth) {
 
 window.addEventListener("load", detection)
 
-
+/*
 let slidhead = document.getElementsByClassName('slidhead')[0]
 let sidebarPubsInternal = document.querySelectorAll(".sidebar_pubs a")
 
@@ -72,6 +68,7 @@ for (let index = 0; index < sidebarPubsInternal.length; index++) {
     container.appendChild(element.cloneNode(true))    
 
 }
+*/
 /*
 console.log(slidhead.lastChild)
 
