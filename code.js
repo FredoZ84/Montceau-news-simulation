@@ -29,6 +29,8 @@ function sidebarPubsIteration() {
 
 function sidebarPubsAdaptation(referenceWidth) {
 
+    let sidebar = document.getElementById("sidebar")
+
     let sidebarPubsExternalText ="#sidebar>.sidebar_pubs>div>div,#sidebar>.sidebar_pubs>ins.adsbygoogle>*"
 
     let sidebarPubsExternal = document.querySelectorAll(sidebarPubsExternalText)
@@ -39,8 +41,8 @@ function sidebarPubsAdaptation(referenceWidth) {
         for (let index = 0; index < sidebarPubsExternal.length; index++) {
 
             let element = sidebarPubsExternal[index]
-            let multiplier = element.clientWidth/referenceWidth // coefficient multiplicateur
-            let widthValueObjective = window.innerWidth*multiplier // objectif de valeur de largeur      
+            let multiplier = 0.95 // coefficient multiplicateur
+            let widthValueObjective = sidebar.clientWidth*multiplier // objectif de valeur de largeur      
             let scaleValue = widthValueObjective/element.clientWidth
 
             //console.log(scaleValue)
