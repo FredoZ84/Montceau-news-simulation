@@ -682,7 +682,7 @@ body {
   #sidebar>.sidebar_pubs>div>div,#sidebar>.sidebar_pubs>ins.adsbygoogle>* {
     transform-origin: top left;
     /*transform: scale(0.9);*/
-    /*border: 1px solid !important;*/
+    border: 1px solid !important;
   }
 }
 
