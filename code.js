@@ -41,7 +41,7 @@ function sidebarPubsAdaptation(referenceWidth) {
         for (let index = 0; index < sidebarPubsExternal.length; index++) {
 
             let element = sidebarPubsExternal[index]
-            let multiplier = 0.95 // coefficient multiplicateur
+            let multiplier = 0.90 // coefficient multiplicateur
             let widthValueObjective = sidebar.clientWidth*multiplier // objectif de valeur de largeur      
             let scaleValue = widthValueObjective/300
 
