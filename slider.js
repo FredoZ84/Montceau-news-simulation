@@ -1,7 +1,6 @@
 let element = document.getElementsByClassName('element');
 element[0].classList.add("active");
 let dots = document.getElementsByClassName("dot"); // varialble locale
-let nb = 0
 let compteur = 0;
 let time = 3
 let timeMilli = time*1000
@@ -13,12 +12,18 @@ window.onload = () => {
 
 	const points = document.getElementById("points");// ensemble des flèches  et sélécteurs
 	
-
 	elements =  document.querySelector(".elements");
+
+	// on clone la première image
+	let firstImage = elements.firstElementChild.cloneNode(true);
+	// on lui rajoute une classe pour précisé que c'est un supplément
+	firstImage.classList.add("additional")
+	// on injecte le clone a la fin du diapo
+	elements.appendChild(firstImage);
+
 	slides = document.getElementsByClassName("element");
 	// on calcul la largeur du diaporama
-	slidesWidth = slider.getBoundingClientRect().width ;
-    
+	slidesWidth = slider.getBoundingClientRect().width ;    
 
 	//let next = document.querySelector("#next");
 	//let prev = document.querySelector("#prev");
@@ -28,22 +33,16 @@ window.onload = () => {
 	//prev.addEventListener("click", slidePrev);
 
 	//Automatiser le diaporama
-	alternate()
-	let numberOfRepetition = 30
-	for (let index = 0; index < numberOfRepetition; index++) {
-		setTimeout(()=>{
-			alternate()
-		},((slides.length-1)*timeMilli+timeMilli)*2*(index+1))	
-	}
+	startTimer()
+
 	dotActive();
 
 	// gerer le survol de la souris
-	/*slider.addEventListener("mouseover", stopTimer);
+	slider.addEventListener("mouseover", stopTimer);
 	slider.addEventListener("mouseout", startTimer);
 
 	points.addEventListener("mouseover",stopTimer);
-	points.addEventListener("mouseout", startTimer);*/
-
+	points.addEventListener("mouseout", startTimer);
 
 	findDot();
 
@@ -103,35 +102,42 @@ window.onload = () => {
 	}	
 }
 
-function alternate() {
-	nb++
-	startTimer()
-	setTimeout(() => {
-		stopTimer()
-		startTimerInverse()
-		setTimeout(() => {
-			stopTimer()
-		}, ((slides.length-1)*timeMilli));
-	}, ((slides.length-1)*timeMilli));
-}
+
 
 function slideNext() {
 	compteur++
-	if (compteur == slides.length) {
+	elements.style.transition =" 1s linear";
+	/*if (compteur == slides.length) {
 		compteur = 0;
-	}
+	}*/
 	let decal = -slidesWidth * compteur;
 	elements.style.transform =  "translateX("+ decal +"px)";
-	dotActive();	
+	dotActive();
+	
+	// rembobinage caché
+	setTimeout(()=>{
+		if (compteur >= slides.length-1) {
+			compteur = 0;
+			elements.style.transition ="unset";
+			elements.style.transform = "translateX(0)";
+		}
+	},1000)
 }
 
 function slidePrev() {
 	compteur--
+	elements.style.transition =" 1s linear";
 	if (compteur < 0 ) {
 		compteur = slides.length-1;
+		let decal = -slidesWidth * compteur;
+		elements.style.transition ="unset";
+		elements.style.transform = "translateX("+ decal +"px)";
+		setTimeout(slidePrev,1000)
 	}
+
 	let decal = -slidesWidth * compteur;
 	elements.style.transform = "translateX("+ decal +"px)";
+
 	dotActive();
 }
 
@@ -155,18 +161,27 @@ function addDot(){//ajoute les selecteurs
 		points.appendChild(newDot);
 		tabPoint.push(newDot);
 	}
+
+	if (dots.length == slides.length) {
+		if (slides[slides.length-1].classList.contains("additional")){
+			dots[slides.length-1].style.display = "none"
+		}
+	}
 }
 
 function dotActive() { // Montre la diapositives en cours
 	for (let i = 0; i < dots.length; i++) {
 		   dots[i].classList.remove("active");
 	}
-	dots[compteur].classList.add("active");
+	if (compteur == slides.length - 1) {
+		dots[0].classList.add("active");
+	} else {
+		dots[compteur].classList.add("active");
+	}	
 }
 
 function findDot() {
 	for(let a=0;a< dots.length;a++){
-		test = dots[a];
 			
 		dots[a].addEventListener('click', function(){
 			if (a < compteur) {
@@ -187,4 +202,5 @@ function findDot() {
 			}
 		});
 	};
+	//setTimeout(startTimer,timeMilli)
 }

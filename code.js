@@ -16,7 +16,7 @@ function detection() {
         sidebarPubsAdaptation(835)
         contentPubsAdaptation(1110) 
     })
-    
+
     const sidebar = document.querySelector("#sidebar")
     const content = document.querySelector("#content")
     mutationObserver.observe(sidebar, {childList:true, subtree:true})
@@ -29,7 +29,7 @@ function sidebarPubsAdaptation(referenceWidth) {
 
     let sidebar = document.getElementById("sidebar")
 
-    let sidebarPubsExternal = document.querySelectorAll("#sidebar .sidebar_pubs iframe")
+    let sidebarPubsExternal = document.querySelectorAll("#sidebar .sidebar_pubs iframe, #sidebar .pub-single-article iframe")
 
     if (window.innerWidth < referenceWidth) {
             

@@ -20,7 +20,6 @@ function areaCreation() {
        elements.appendChild(element)
 
        element.appendChild(bannerAd)
-
     } 
 
     let points = document.createElement("div")
